@@ -14,13 +14,27 @@ public class Matriz {
         columnas=sc.nextInt();
         this.columnas=columnas;
         this.matriz = new int[filas][columnas];
-        for(int f=0; f< matriz.length; f++){
-            for(int c=0; c<matriz[f].length; c++){
-                System.out.println("Ingresa un valor ");
-                matriz[f][c]=sc.nextInt();
-                //Plantilla de la matriz realizada
+    }
+    public double valores( int filas, int columnas){
+        String opcion;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("¿Deseas crear una matriz aleatoria?");
+        opcion=sc.nextLine();
+        if(opcion.equalsIgnoreCase("si")) {
+            for (int f = 0; f < matriz.length; f++) {
+                for (int c = 0; c < matriz[f].length; c++) {
+                    matriz[f][c] = (int) (Math.random() * 20 + 1);
+                }
+            }
+        } else if (opcion.equalsIgnoreCase("no")) {
+            for (int f = 0; f < matriz.length; f++) {
+                for (int c = 0; c < matriz[f].length; c++) {
+                    System.out.print("Ingresa los numeros de la matriz: ");
+                    matriz[f][c] = sc.nextInt();
+                }
             }
         }
+        return matriz[filas][columnas];
 
     }
 

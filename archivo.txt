@@ -1,0 +1,21 @@
+import java.util.ArrayList;
+
+public class Main {
+    public static void main(String[] args) {
+        ArrayList<String> nombres = new ArrayList<>();
+        nombres.add("Juan");
+        nombres.add("Maria");
+        nombres.add("Carlos");
+        nombres.add("Ana");
+
+        for (String nombre : nombres) {
+            System.out.println(nombre);
+        }
+    }
+}
+
+Esto es una ladilla
+esto tampoco se que hacer
+y que hago aqui
+
+Esto es igual
